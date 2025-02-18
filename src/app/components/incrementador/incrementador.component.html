@@ -1,0 +1,27 @@
+<div class="input-group">
+  <span class="input-group-btn">
+    <button
+      (click)="restarProgreso()"
+      [ngClass]="btnClass"
+      type="button"
+    >
+      <i class="fa fa-minus"></i>
+    </button>
+  </span>
+  <input
+  [ngClass]="{'is-invalid': progresoRecibido > 100 || progresoRecibido < 0}"
+  type="text"
+  class="form-control"
+  placeholder="Product name"
+  [(ngModel)]="progresoRecibido"
+  (ngModelChange)="onChange($event)" />
+  <span class="input-group-btn">
+    <button
+      (click)="sumarProgreso()"
+      [ngClass]="btnClass"
+      type="button"
+    >
+      <i class="fa fa-plus"></i>
+    </button>
+  </span>
+</div>

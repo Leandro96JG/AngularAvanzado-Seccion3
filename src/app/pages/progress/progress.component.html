@@ -1,1 +1,44 @@
-<p>progress works!</p>
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Striped Progress bar</h4>
+        <div class="progress m-t-20">
+          <div
+            class="progress-bar bg-primary progress-bar-striped active"
+            style="height: 7px"
+            role="progressbar"
+            [style.width]="getProgress1"
+            ></div>
+        </div>
+        <div class="progress m-t-20">
+          <div
+            class="progress-bar bg-info progress-bar-striped active"
+            style="height: 7px"
+            role="progressbar"
+            [style.width]="getProgress2"
+            ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+
+      <component-incrementador (valorRecibido)="progress1=$event" [valorEnviado]="progress1" ></component-incrementador>
+
+    </div>
+  </div>
+</div>
+<div class="col-6">
+  <div class="card">
+    <div class="card-body">
+      <component-incrementador (valorRecibido)="progress2=$event" [valorEnviado]="progress2"></component-incrementador>
+
+    </div>
+  </div>
+</div>
+</div>
