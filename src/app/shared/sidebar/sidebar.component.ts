@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SidebarService } from '../../services/sidebar.service';
 
 @Component({
   selector:'shared-sidebar',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
+  private sideBarService = inject(SidebarService);
+  public menuItems:any[] = [];
+
+  constructor(){
+    this.menuItems = this.sideBarService.menu;
+    console.log(this.menuItems);
+
+  }
 
 }
