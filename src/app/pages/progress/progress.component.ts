@@ -9,6 +9,7 @@ export class ProgressComponent {
  public progress1:number=28;
  public progress2:number=9;
 
+
  get getProgress1(){
   return `${this.progress1}%`;
  }

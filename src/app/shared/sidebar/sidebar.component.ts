@@ -12,7 +12,6 @@ export class SidebarComponent {
 
   constructor(){
     this.menuItems = this.sideBarService.menu;
-    console.log(this.menuItems);
 
   }
 
